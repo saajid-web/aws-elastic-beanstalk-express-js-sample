@@ -55,6 +55,7 @@ pipeline {
         stage('Test') {
             steps {
                 script {
+                    sh 'npm install jest'
                     sh 'npm test'
                     echo 'Tests completed.'
                 }
